@@ -24,14 +24,6 @@ Mocha is a JavaScript testing framework that runs on Node.js, and Chai is an ass
 - tests: Contains unit tests to verify the correct functioning of business rules.
 - app.js: The entry point of the application.
 
-## Tools and Technologies Used
-
-- Python: Programming language used for backend development.
-- Flask: Lightweight web framework used to expose APIs (run.py).
-- pytest: Framework for writing and executing unit tests (tests/).
-- SMTP Library: Utilized for email notifications (notification_sender.py).
-- Requests Library: Used for making HTTP requests to external APIs (services/).
-
 ## How to Run the Project
 
 # Prerequisites
