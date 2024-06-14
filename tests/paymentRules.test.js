@@ -62,4 +62,33 @@ describe("Payment Rules", () => {
             "Generate commission payment to agent",
         ]);
     });
+
+    it("should apply upgrade to membership, generate shipment slip for physical product, and notify owner", () => {
+        const order = new Order("7", "physical", true, true);
+        processPayment(order);
+        assert.deepStrictEqual(order.shipmentSlip, [
+            "Generate shipment slip for physical product",
+        ]);
+        assert.deepStrictEqual(order.commissionPayments, [
+            "Generate commission payment to agent",
+        ]);
+        assert.deepStrictEqual(order.emailNotifications, [
+            "Apply upgrade and notify owner",
+        ]);
+    });
+
+    it("should do nothing for unknown product type", () => {
+        const order = new Order("8", "unknown");
+        processPayment(order);
+        assert.deepStrictEqual(order.shipmentSlip, []);
+        assert.deepStrictEqual(order.commissionPayments, []);
+        assert.deepStrictEqual(order.emailNotifications, []);
+    });
+
+    it('should not include free "First Aid" video for a different video product', () => {
+        const order = new Order("9", "video");
+        order.id = "different-video";
+        processPayment(order);
+        assert.deepStrictEqual(order.shipmentSlip, []);
+    });
 });
