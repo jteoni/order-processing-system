@@ -26,7 +26,7 @@ Mocha is a JavaScript testing framework that runs on Node.js, and Chai is an ass
 
 ## How to Run the Project
 
-# Prerequisites
+### Prerequisites
 - Node.js installed (recommended LTS version)
 - npm (Node.js package manager)
 
@@ -48,9 +48,7 @@ node app.js
 The server will be running on port 3000 (or another port defined in the PORT environment variable).
 
 Test the API:
-<samp>
 Use a tool like Postman or curl to make POST requests to http://localhost:3000/process-payment with a JSON payload, for example:
-</samp>
 ```
 {
   "id": "1",
@@ -76,4 +74,4 @@ Run the tests:
 ```
 npm test
 ```
-<samp>This will run all the unit tests located in the tests directory.</samp>
+This will run all the unit tests located in the tests directory.
