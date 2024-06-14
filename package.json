@@ -1,0 +1,22 @@
+{
+    "name": "order-processing-system",
+    "version": "1.0.0",
+    "main": "app.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "mocha 'tests/**/*.test.js'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "express": "^4.19.2"
+    },
+    "devDependencies": {
+        "chai": "^5.1.1",
+        "mocha": "^10.4.0"
+    }
+}
