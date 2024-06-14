@@ -32,7 +32,7 @@ Mocha is a JavaScript testing framework that runs on Node.js, and Chai is an ass
 
 Clone the repository:
 ```
-git clone https://github.com/your-username/order-processing-system.git
+git clone https://github.com/jteoni/order-processing-system.git
 cd order-processing-system
 ```
 
